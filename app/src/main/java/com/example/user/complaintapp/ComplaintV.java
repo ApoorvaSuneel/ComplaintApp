@@ -3,6 +3,8 @@ package com.example.user.complaintapp;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -143,15 +145,40 @@ public class ComplaintV extends Fragment {
     }
 
     private void viewthreads() {
+//request to createpolls
+        ThreadView myDetailFragment = new ThreadView();
+        Bundle bundle = new Bundle();
+        bundle.putString("id", i2);
+        myDetailFragment.setArguments(bundle);
+        FragmentManager fm =getFragmentManager();
+
+        if (fm.findFragmentById(android.R.id.content) == null) {
+            FragmentTransaction ft = fm.beginTransaction();
+            // FragmentTransaction fragmentTransaction = getActivity().getFragmentManager().beginTransaction();
+            ft.replace(R.id.frag, myDetailFragment);
+            ft.commit();
+        }}
 
 
 
 
-    }
     private void viewpolls() {
+        //request to createpolls
+        //go to the next fragment and send json request for further process
+        PollView myDetailFragment = new PollView();
+        Bundle bundle = new Bundle();
+        bundle.putString("id", i2);
+        myDetailFragment.setArguments(bundle);
+        FragmentManager fm =getFragmentManager();
+
+        if (fm.findFragmentById(android.R.id.content) == null) {
+            FragmentTransaction ft = fm.beginTransaction();
+            // FragmentTransaction fragmentTransaction = getActivity().getFragmentManager().beginTransaction();
+            ft.replace(R.id.frag, myDetailFragment);
+            ft.commit();
+        }}
 
 
-    }
     private void search() {
     }
 
