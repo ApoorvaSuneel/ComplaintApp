@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/blue2"
     android:layout_height="match_parent"
     tools:context="com.example.user.complaintapp.ResolveD">
 
@@ -84,17 +85,17 @@
         android:id="@+id/cv13"
         android:layout_weight="0.03" />
 
-    <Button
+    <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="change status"
         android:id="@+id/b1" />
-
+    -->
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Solve the Complaint"
-        android:id="@+id/checkBox"
+        android:id="@+id/b1"
         android:layout_gravity="center_horizontal" />
 
     <Button
