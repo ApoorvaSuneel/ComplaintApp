@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class Login extends AppCompatActivity {
      Button b;
-    public static String ip="http://10.192.32.86:8000/";     //public static ip for all classes
+    public static String ip="http://10.237.23.150:8000/";     //public static ip for all classes
     private static String JSON_URL;
     public static ArrayList<String> logchoice=new ArrayList<String>();
     public static String[] res = new String[5]  ;

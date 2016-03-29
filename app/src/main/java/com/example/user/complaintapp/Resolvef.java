@@ -82,7 +82,6 @@ public class Resolvef extends ListFragment {
                 try {
                     // Parsing json object response
                     JSONArray complist = response.getJSONArray("c2r");
-                    Boolean b=response.getBoolean("mycomp");
                         for (int i = 0; i < complist.length(); i++) {
                             JSONObject compl = (JSONObject) complist.get(i);
                             comp_id.add(compl.getString("id"));

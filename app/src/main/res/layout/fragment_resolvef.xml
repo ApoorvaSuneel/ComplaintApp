@@ -34,14 +34,6 @@
             android:layout_below="@+id/linearLayout"
             />
 
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="30dp"
-                android:id="@+id/imageButton2"
-                android:background="@drawable/search" />
-
         </LinearLayout>
 
         <ScrollView

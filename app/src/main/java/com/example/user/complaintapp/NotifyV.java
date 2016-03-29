@@ -72,8 +72,8 @@ public class NotifyV extends Fragment {
             t5.setText(i5);
             t6.setText(i6);
           //  t7.setText(i7);
-            t8.setText(i8);
-            t9.setText(i9);
+
+
         }
         JSON1=Login.ip+"default/follow.json/"+i2+"?follow=1";
         JSON2=Login.ip+"default/follow.json/"+i2+"?follow=0";

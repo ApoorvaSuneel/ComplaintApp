@@ -35,6 +35,8 @@ import java.util.ArrayList;
 public class Profile extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 NavigationView navigationView=null;
+    public static String str="";
+    public  static int r=0;
     Toolbar toolbar=null;
 
     @Override
@@ -77,7 +79,7 @@ NavigationView navigationView=null;
 
     private void logout() {
         JsonObjectRequest jreq = new JsonObjectRequest(Request.Method.GET,
-                "http://10.192.32.86:8000/default/logout.json", null, new Response.Listener<JSONObject>() {
+                "http://10.237.23.150:8000/default/logout.json", null, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {

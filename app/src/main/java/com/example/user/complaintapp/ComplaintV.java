@@ -75,22 +75,17 @@ public class ComplaintV extends Fragment {
             i9= bundle.getString("status");
             i10= bundle.getString("teamid");
             i11= bundle.getString("imageid");
-            i12= bundle.getString("red");
-            i13= bundle.getString("pers");
+            i12= Boolean.toString(bundle.getBoolean("red"));
 
             t1.setText(i1);
-            t2.setText(i2);
             t3.setText(i3);
             t4.setText(i4);
-            t5.setText(i5);
             t6.setText(i6);
-            t7.setText(i7);
-            t8.setText(i8);
             t9.setText(i9);
             t10.setText(i10);
             t11.setText(i11);
             t12.setText(i12);
-            t13.setText(i13);
+
         }
 
         JSON1=Login.ip+"default/upvotec.json/"+i2+"?up=1";//upvote
@@ -165,9 +160,11 @@ public class ComplaintV extends Fragment {
     private void viewpolls() {
         //request to createpolls
         //go to the next fragment and send json request for further process
+
         PollView myDetailFragment = new PollView();
         Bundle bundle = new Bundle();
         bundle.putString("id", i2);
+        bundle.putString("pollid",i5);
         myDetailFragment.setArguments(bundle);
         FragmentManager fm =getFragmentManager();
 
@@ -180,6 +177,7 @@ public class ComplaintV extends Fragment {
 
 
     private void search() {
+
     }
 
     private void upvote() {

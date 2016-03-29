@@ -3,10 +3,14 @@ package com.example.user.complaintapp;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -28,10 +32,11 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PollView extends Fragment {
+public class PollView extends ListFragment {
 
-     String Json,i2,m;
+     String Json,JSOn,i2,i5,m;
     RadioButton r;
+    Button b;
     ListView l;
     ArrayList<String> li;
     public PollView() {
@@ -46,15 +51,25 @@ public class PollView extends Fragment {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_poll_view, container, false);
         Bundle bundle = this.getArguments();
-        l=(ListView)v.findViewById(R.id.poll);
+        //l=(ListView)v.findViewById(R.id.poll);
+
         if (bundle != null) {
            //id of the complaint for the view to show
             i2 = bundle.getString("id");
+            i5=bundle.getString("pollid");
             Json= Login.ip + "viewpoll.json/"+i2;
                       li=new ArrayList<String>();//view poll
-            request();
+            Toast.makeText(getActivity(),
+                    Json,
+                    Toast.LENGTH_LONG).show();
+           request();
         }
         return v;
+    }
+
+
+    private void Vote() {
+
     }
 
     private void request() {
@@ -80,7 +95,8 @@ public class PollView extends Fragment {
                     }
                     String[] array1 = li.toArray(new String[li.size()]);
                     ArrayAdapter<String> t =new ArrayAdapter<String>(getActivity(),R.layout.pv,R.id.radioButton,array1);
-                    l.setAdapter(t);
+                    setListAdapter(t);
+
 
                 }
                 catch (JSONException e) {
@@ -103,6 +119,44 @@ public class PollView extends Fragment {
 
 
     }
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        JSOn =Login.ip+"/pollvote.json/"+i2+"?opt="+position;
+        JsonObjectRequest jreq = new JsonObjectRequest(Request.Method.GET,
+                JSOn, null, new Response.Listener<JSONObject>() {
+
+            @Override
+            public void onResponse(JSONObject response) {
+
+
+                try {
+                    // Parsing json object response
+                    Boolean b=response.getBoolean("success");
+                    if(b)
+                    {
+
+                        Toast.makeText(getActivity(),
+                                "Voted successfully",
+                                Toast.LENGTH_SHORT).show();
+                    }}
+                catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getActivity(),
+                            "Could not vote" + e.getMessage(),
+                            Toast.LENGTH_LONG).show();
+                }}}, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }});
+        RequestQueue RequestP = Volley.newRequestQueue(getActivity());
+        RequestP.add(jreq);
+
+
+
+
+    }
+
 
 
 }

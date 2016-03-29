@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/blue3"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.example.user.complaintapp.AddComplaint"
     android:orientation="vertical">
@@ -105,13 +104,7 @@
 
            </LinearLayout>
 
-             <Button
-                 android:layout_width="150dp"
-                 android:layout_height="wrap_content"
-                 android:text="Add Complaint"
-                 android:id="@+id/button2"
-                 android:layout_gravity="center_horizontal|bottom"
-                 android:background="@drawable/buttonborder"/>
+
 
          </LinearLayout>
      </RelativeLayout>
