@@ -29,7 +29,8 @@ import org.json.JSONObject;
  */
 public class ResolveD extends Fragment {
 
-    Button b1,b2,b3,b4,b5,b6,b7;
+    Button b1,b3,b6;
+    ImageButton b7,b5,b2,b4;
     private TextView t1,t2,t3,t4,t9,t10,t11,t12,t13;
     private String i1,i2,i3,i4,i8,i9,i10,i11,i12,i13;
     private String JSON1,JSON2,JSON3,JSON4,JSON5,JSON6 ;
@@ -58,12 +59,12 @@ public class ResolveD extends Fragment {
         t12 = (TextView) v.findViewById(R.id.cv12);
         t13 = (TextView) v.findViewById(R.id.cv13);
         b1 = (Button) v.findViewById(R.id.b1);
-        b2 = (Button) v.findViewById(R.id.b2);
+        b2 = (ImageButton) v.findViewById(R.id.b2);
         b3 = (Button) v.findViewById(R.id.b3);
-        b4 = (Button) v.findViewById(R.id.b4);
-        b5 = (Button) v.findViewById(R.id.b5);
+        b4 = (ImageButton) v.findViewById(R.id.b4);
+        b5 = (ImageButton) v.findViewById(R.id.b5);
         b6 = (Button) v.findViewById(R.id.b6);
-        b7 = (Button) v.findViewById(R.id.b7);
+        b7 = (ImageButton) v.findViewById(R.id.b7);
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             i1 = bundle.getString("txt");

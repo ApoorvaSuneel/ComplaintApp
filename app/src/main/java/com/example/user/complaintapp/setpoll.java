@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 
 /**
@@ -15,7 +16,7 @@ import android.widget.EditText;
  */
 public class setpoll extends Fragment {
   EditText ed1,ed2;
-    Button b;
+    ImageButton b;
   String o1,o2,JSON_URL,id;
     public setpoll() {
         // Required empty public constructor
@@ -27,7 +28,7 @@ public class setpoll extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_setpoll, container, false);
-        b=(Button)v.findViewById(R.id.button);
+        b=(ImageButton)v.findViewById(R.id.button);
         ed1 = (EditText)v.findViewById(R.id.ed1);
         ed2 = (EditText)v.findViewById(R.id.ed2);
         Bundle bundle = this.getArguments();

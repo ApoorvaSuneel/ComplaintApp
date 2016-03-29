@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/plainblue"
     android:orientation="vertical"
     tools:context="com.example.user.complaintapp.setpoll">
 
@@ -47,10 +48,17 @@
         android:id="@+id/textView5" />
 
 
-    <Button
+    <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SETUP A POLL"
-        android:id="@+id/b" />
+        android:id="@+id/b" />-->
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b"
+        android:background="@drawable/polls"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

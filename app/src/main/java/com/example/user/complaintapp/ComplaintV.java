@@ -97,7 +97,7 @@ public class ComplaintV extends Fragment {
         JSON2=Login.ip+"default/upvotec.json/"+i2+"?up=0";//downvote
         JSON3=Login.ip+"viewpoll.json/"+i2;//poll
         JSON4=Login.ip+"viewthread.json/"+i2;//thread
-        //JSON5=Login.ip+"markred.json/"+i2;//search
+        //JSON5=Login.ip+"markred.json/"+i2;
        /*b1.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
