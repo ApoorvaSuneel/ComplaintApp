@@ -2,88 +2,131 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/blue2"
+    android:background="@drawable/blue4"
     android:layout_height="match_parent"
     tools:context="com.example.user.complaintapp.ResolveD">
 
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout2"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="174dp"
+                android:text="Complaint Description"
+                android:id="@+id/cv1"
+                android:layout_weight="0.65" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Image"
+                android:id="@+id/cv10"
+                android:layout_alignTop="@+id/cv13"
+                android:layout_toLeftOf="@+id/cv13"
+                android:layout_toStartOf="@+id/cv13"
+                android:layout_marginRight="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.48"
+                />
+
+        </LinearLayout>
+
+        <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="minor text"
-        android:id="@+id/cv1" />
+        android:text="id of compliant"
+        android:id="@+id/cv2"
+            android:layout_alignTop="@+id/cv3"
+            android:layout_alignLeft="@+id/b6"
+            android:layout_alignStart="@+id/b6" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+
+        <TextView
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="id of compliaint"
-        android:id="@+id/cv2" />
+        android:text="Complainant"
+        android:id="@+id/cv4"
+            android:layout_below="@+id/cv9"
+            android:layout_alignLeft="@+id/cv9"
+            android:layout_alignStart="@+id/cv9"
+            android:layout_marginTop="27dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="priority"
-        android:id="@+id/cv3" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="complainer"
-        android:id="@+id/cv4" />
-
-    <TextView
+        <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="poll id"
-        android:id="@+id/cv5" />
+        android:id="@+id/cv5"
+        android:layout_below="@+id/cv11"
+        android:layout_alignLeft="@+id/cv10"
+        android:layout_alignStart="@+id/cv10" />-->
 
-    <TextView
+        <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="resolver id"
-        android:id="@+id/cv6" />
+        android:id="@+id/cv6"
+        android:layout_below="@+id/cv10"
+        android:layout_toRightOf="@+id/cv3"
+        android:layout_toEndOf="@+id/cv3" />-->
 
-    <TextView
+        <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="threadid"
-        android:id="@+id/cv7" />
-    <TextView
+        android:id="@+id/cv7"
+        android:layout_below="@+id/cv6"
+        android:layout_alignRight="@+id/cv4"
+        android:layout_alignEnd="@+id/cv4" />-->
+        <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="anony"
-        android:id="@+id/cv8" />
-    <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/cv8"
+        android:layout_alignTop="@+id/cv9"
+        android:layout_toRightOf="@+id/b2"
+        android:layout_toEndOf="@+id/b2" />-->
+        <TextView
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="teamid"
-        android:id="@+id/cv9" />
+        android:text="Team"
+        android:id="@+id/cv9"
+            android:layout_below="@+id/cv13"
+            android:layout_alignLeft="@+id/b2"
+            android:layout_alignStart="@+id/b2"
+            android:layout_marginTop="27dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+        <TextView
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="imageid"
-        android:id="@+id/cv10" />
+        android:text="Redundancy"
+        android:id="@+id/cv11"
+            android:layout_alignTop="@+id/cv9"
+            android:layout_alignLeft="@+id/cv12"
+            android:layout_alignStart="@+id/cv12" />
 
-    <TextView
-        android:layout_width="wrap_content"
+        <TextView
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="red"
-        android:id="@+id/cv11" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ispersonal"
-        android:id="@+id/cv12" />
+        android:text="Is_personal"
+        android:id="@+id/cv12"
+            android:layout_alignTop="@+id/cv4"
+            android:layout_alignRight="@+id/b5"
+            android:layout_alignEnd="@+id/b5" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="status"
-        android:id="@+id/cv13"
-        android:layout_weight="0.03" />
 
     <!--<Button
         android:layout_width="wrap_content"
@@ -91,43 +134,124 @@
         android:text="change status"
         android:id="@+id/b1" />
     -->
-    <CheckBox
+        <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Solve the Complaint"
         android:id="@+id/b1"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/b5"
+            android:layout_alignStart="@+id/b5" />
+       <!-- android:layout_marginBottom="17dp"-->
 
-    <Button
+
+    <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="create polls"
-        android:id="@+id/b2" />
-    <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/b2" />-->
+        <Button
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="view threads"
-        android:id="@+id/b3" />
-    <Button
+        android:id="@+id/b3"
+        android:background="@drawable/buttonborder"
+            android:layout_marginBottom="14dp"
+            android:layout_above="@+id/b1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp" />
+    <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="upvote"
-        android:id="@+id/b4" />
-    <Button
+        android:id="@+id/b4" />-->
+      <!--  <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="downvote"
         android:id="@+id/b5" />
-    <Button
-        android:layout_width="wrap_content"
+        -->
+        <Button
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="mark redundant"
-        android:id="@+id/b6" />
+        android:id="@+id/b6"
+        android:background="@drawable/buttonborder"
+            android:layout_alignTop="@+id/b3"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="22dp"
+            android:layout_marginEnd="22dp" />
 
-    <Button
+    <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="View Poll"
         android:id="@+id/b7" />
+        -->
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/b7"
+            android:background="@drawable/polls2"
+            android:layout_alignTop="@+id/b2"
+            android:layout_alignRight="@+id/b6"
+            android:layout_alignEnd="@+id/b6" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/b5"
+            android:background="@drawable/dislike"
+            android:layout_alignTop="@+id/b2"
+            android:layout_alignRight="@+id/b3"
+            android:layout_alignEnd="@+id/b3" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/b2"
+            android:background="@drawable/polls"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/b6"
+            android:layout_alignLeft="@+id/cv13"
+            android:layout_alignStart="@+id/cv13" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/b4"
+            android:background="@drawable/like"
+            android:layout_alignTop="@+id/b5"
+            android:layout_alignLeft="@+id/b3"
+            android:layout_alignStart="@+id/b3" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Priority"
+            android:id="@+id/cv3"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_alignLeft="@+id/cv11"
+            android:layout_alignStart="@+id/cv11"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp" />
+
+        <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:id="@+id/cv13"
+        android:layout_weight="0.03"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_toLeftOf="@+id/b7"
+            android:layout_toStartOf="@+id/b7" />
+
+
+    </RelativeLayout>
 </LinearLayout>

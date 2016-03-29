@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,8 +30,8 @@ import org.json.JSONObject;
 public class ResolveD extends Fragment {
 
     Button b1,b2,b3,b4,b5,b6,b7;
-    private TextView t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13;
-    private String i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13;
+    private TextView t1,t2,t3,t4,t9,t10,t11,t12,t13;
+    private String i1,i2,i3,i4,i8,i9,i10,i11,i12,i13;
     private String JSON1,JSON2,JSON3,JSON4,JSON5,JSON6 ;
     public ResolveD() {
         // Required empty public constructor
@@ -47,10 +48,10 @@ public class ResolveD extends Fragment {
         t2 = (TextView) v.findViewById(R.id.cv2);
         t3 = (TextView) v.findViewById(R.id.cv3);
         t4 = (TextView) v.findViewById(R.id.cv4);
-        t5 = (TextView) v.findViewById(R.id.cv5);
-        t6 = (TextView) v.findViewById(R.id.cv6);
-        t7 = (TextView) v.findViewById(R.id.cv7);
-        t8 = (TextView) v.findViewById(R.id.cv8);
+        //t5 = (TextView) v.findViewById(R.id.cv5);
+        //t6 = (TextView) v.findViewById(R.id.cv6);
+        //t7 = (TextView) v.findViewById(R.id.cv7);
+        //t8 = (TextView) v.findViewById(R.id.cv8);
         t9 = (TextView) v.findViewById(R.id.cv9);
         t10 = (TextView) v.findViewById(R.id.cv10);
         t11 = (TextView) v.findViewById(R.id.cv11);
@@ -69,10 +70,10 @@ public class ResolveD extends Fragment {
             i2 = bundle.getString("id");
             i3 = bundle.getString("prio");
             i4 = bundle.getString("comp");
-            i5 = bundle.getString("poll");
-            i6 = bundle.getString("res");
-            i7 = bundle.getString("thread");
-            i8 = bundle.getString("anon");
+            //i5 = bundle.getString("poll");
+            //i6 = bundle.getString("res");
+           // i7 = bundle.getString("thread");
+            //i8 = bundle.getString("anon");
             i9 = bundle.getString("status");
             i10 = bundle.getString("teamid");
             i11 = bundle.getString("imageid");
@@ -80,13 +81,13 @@ public class ResolveD extends Fragment {
             i13 = bundle.getString("pers");
 
             t1.setText(i1);
-            t2.setText(i2);
+            //t2.setText(i2);
             t3.setText(i3);
             t4.setText(i4);
-            t5.setText(i5);
-            t6.setText(i6);
-            t7.setText(i7);
-            t8.setText(i8);
+            //t5.setText(i5);
+            //t6.setText(i6);
+            //t7.setText(i7);
+            //t8.setText(i8);
             t9.setText(i9);
             t10.setText(i10);
             t11.setText(i11);
