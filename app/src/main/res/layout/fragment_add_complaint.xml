@@ -24,7 +24,6 @@
                 android:layout_width="350dp"
                 android:layout_height="200dp"
                 android:id="@+id/editText2"
-                android:drawableStart="@drawable/details"
                 android:hint="Complaint Details here"
                 android:background="@color/edittext"
                 android:layout_marginBottom="26dp"

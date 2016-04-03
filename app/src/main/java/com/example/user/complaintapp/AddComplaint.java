@@ -59,8 +59,14 @@ public class AddComplaint extends Fragment {
             }
         });
         JSON1=Login.ip+"/default/addcomplaint.json?fn="+fn+"&ln="+ln+"&team="+tm+"&desc="+des+"&numtag="+n;
-
-        JSON1=Login.ip+"/default/addcomplaint.json?fn=bob&ln=martin&team=cs&desc=no%20marker%20in%20room&numtag=1&tag1=internet&priority=0&personal=0&anony=0";
+        String[] a = tags.getText().toString().split(",");
+        for (int i=0;i<a.length;i++)
+        {
+            JSON1=JSON1+"&tag"+Integer.toString(i+1) +"="+a[i];
+        }
+        JSON1=JSON1+"&priority="+prio.getText().toString()+"&personal"+ispers.getText().toString()+"anony="+anon.getText().toString();
+         addcomplaint();
+        //JSON1=Login.ip+"/default/addcomplaint.json?fn=bob&ln=martin&team=cs&desc=no%20marker%20in%20room&numtag=1&tag1=internet&priority=0&personal=0&anony=0";
         return v;
     }
 
@@ -80,7 +86,7 @@ public class AddComplaint extends Fragment {
                     {
 
                         Toast.makeText(getActivity(),
-                                "Upvoted",
+                                "Complaint added successfully",
                                 Toast.LENGTH_SHORT).show();
                     }}
                 catch (JSONException e) {

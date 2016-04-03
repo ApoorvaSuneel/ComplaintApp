@@ -162,6 +162,7 @@ public class ResolveD extends Fragment {
         ThreadView myDetailFragment = new ThreadView();
         Bundle bundle = new Bundle();
         bundle.putString("id", i2);
+        bundle.putString("ip",JSON4);
         myDetailFragment.setArguments(bundle);
         FragmentManager fm =getFragmentManager();
 

@@ -5,10 +5,64 @@
     android:background="@drawable/plainblue"
     tools:context="com.example.user.complaintapp.ThreadView">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2"
+        android:weightSum="1">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="275dp"
+            android:ellipsize="end"
+            android:text="Threads"
+            android:textStyle="bold|italic"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="30dp"
+            android:id="@+id/textView6"
+            android:layout_below="@+id/linearLayout" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/imageButton2"
+            android:clickable="true"
+            android:background="@drawable/search" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="370dp"
+        android:layout_height="420dp"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="370dp"
+            android:layout_height="420dp">
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:orientation="vertical"
+                android:layout_height="420dp">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@android:id/list"></ListView>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </FrameLayout>
