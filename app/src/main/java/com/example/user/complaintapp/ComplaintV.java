@@ -45,13 +45,11 @@ public class ComplaintV extends Fragment {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_complaint_v, container, false);
         t1=(TextView)v.findViewById(R.id.cv1);
-        t2=(TextView)v.findViewById(R.id.cv2);
+
         t3=(TextView)v.findViewById(R.id.cv3);
         t4=(TextView)v.findViewById(R.id.cv4);
         t5=(TextView)v.findViewById(R.id.cv5);
         t6=(TextView)v.findViewById(R.id.cv6);
-        t7=(TextView)v.findViewById(R.id.cv7);
-        t8=(TextView)v.findViewById(R.id.cv8);
         t9=(TextView)v.findViewById(R.id.cv9);
         t10=(TextView)v.findViewById(R.id.cv10);
         t11=(TextView)v.findViewById(R.id.cv11);
@@ -92,7 +90,7 @@ public class ComplaintV extends Fragment {
         JSON2=Login.ip+"default/upvotec.json/"+i2+"?up=0";//downvote
         JSON3=Login.ip+"viewpoll.json/"+i2;//poll
         JSON4=Login.ip+"viewthread.json/"+i2;//thread
-        //JSON5=Login.ip+"markred.json/"+i2;//search
+        //JSON5=Login.ip+"markred.json/"+i2;
        /*b1.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -176,9 +174,7 @@ public class ComplaintV extends Fragment {
         }}
 
 
-    private void search() {
 
-    }
 
     private void upvote() {
 

@@ -1,13 +1,51 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/plainblue"
     tools:context="com.example.user.complaintapp.AddComment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <RelativeLayout
+        android:layout_width="384dp"
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Comment"
+            android:textSize="20dp"
+            android:id="@+id/textView8"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:id="@+id/editText10"
+            android:hint="Type your Comment here"
+            android:background="@color/edittext"
+            android:layout_marginTop="37dp"
+            android:layout_below="@+id/textView8"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton4"
+            android:background="@drawable/addition"
+            android:layout_marginTop="75dp"
+            android:layout_below="@+id/editText10"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -49,7 +49,7 @@ public class NotifyV extends Fragment {
         t5=(TextView)v.findViewById(R.id.cv5);
         t6=(TextView)v.findViewById(R.id.cv6);
         //t7=(TextView)v.findViewById(R.id.cv7);
-        t8=(TextView)v.findViewById(R.id.cv8);
+
         t9=(TextView)v.findViewById(R.id.cv9);
         b1=(Button)v.findViewById(R.id.b1);
         b2=(Button)v.findViewById(R.id.b2);
