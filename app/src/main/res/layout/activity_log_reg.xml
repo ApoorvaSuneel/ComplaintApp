@@ -11,18 +11,18 @@
     tools:context="com.example.user.complaintapp.LogRegActivity">
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="I'm already a ComplaintApp User"
+        android:text="Let's go"
         android:id="@+id/log"
         android:clickable="true"
-        android:layout_above="@+id/reg"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/buttonborder"/>
+        android:layout_marginBottom="82dp"
+        android:background="@drawable/buttonborder"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
-    <Button
+   <!--
+   <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="I'm new to ComplaintApp"
@@ -33,6 +33,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@drawable/buttonborder"/>
+    -->
 
     <ImageView
         android:layout_width="175dp"

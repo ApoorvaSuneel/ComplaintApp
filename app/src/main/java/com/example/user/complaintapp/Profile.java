@@ -34,7 +34,7 @@ import java.util.ArrayList;
 
 public class Profile extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-NavigationView navigationView=null;
+    NavigationView navigationView=null;
     public static String str="";
     public  static int r=0;
     Toolbar toolbar=null;
@@ -47,7 +47,7 @@ NavigationView navigationView=null;
         String[] s=i.getStringArrayExtra("data");
         Bundle b=new Bundle();
         b.putStringArray("data", s);
-       Detailsf b1=new Detailsf();
+        Detailsf b1=new Detailsf();
         b1.setArguments(b);
         android.support.v4.app.FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frag, b1);
@@ -58,6 +58,7 @@ NavigationView navigationView=null;
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

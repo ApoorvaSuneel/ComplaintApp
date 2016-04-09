@@ -27,7 +27,7 @@ import org.json.JSONObject;
  * A simple {@link Fragment} subclass.
  */
 public class AddComplaint extends Fragment {
-    EditText details,anon,prio,addto,image,tags,team,ispers;
+    EditText details,anon,prio,addto,tags,team,ispers;
     ImageButton b;
     String JSON1;
     String fn,ln,tm,des,n,pri,isp,isa;
@@ -44,9 +44,8 @@ public class AddComplaint extends Fragment {
         View v=inflater.inflate(R.layout.fragment_add_complaint, container, false);
         details=(EditText)v.findViewById(R.id.editText2);
         prio=(EditText)v.findViewById(R.id.editText4);
-         anon=(EditText)v.findViewById(R.id.editText3);
-         team=(EditText)v.findViewById(R.id.editText9);
-        image=(EditText)v.findViewById(R.id.editText);
+        anon=(EditText)v.findViewById(R.id.editText3);
+        team=(EditText)v.findViewById(R.id.editText9);
         tags=(EditText)v.findViewById(R.id.editText7);
         ispers=(EditText)v.findViewById(R.id.editText8);
         addto=(EditText)v.findViewById(R.id.editText5);

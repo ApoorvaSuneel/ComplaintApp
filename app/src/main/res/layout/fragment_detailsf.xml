@@ -17,63 +17,90 @@
         android:id="@+id/imageView2"
         android:background="@drawable/proheaderfinal"/>
 
-       <TextView
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="id"
-        android:id="@+id/t3"
-        android:layout_below="@+id/t2"
-        android:layout_alignLeft="@+id/t2"
-        android:layout_alignStart="@+id/t2" />
-
-       <TextView
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="email"
-        android:id="@+id/t4"
-        android:layout_below="@+id/t3"
-        android:layout_alignLeft="@+id/t5"
-        android:layout_alignStart="@+id/t5" />
-
-       <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="kerberos"
-        android:id="@+id/t5"
-        android:layout_marginRight="109dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/imageButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-       <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="Lastname"
-        android:id="@+id/t2"
-        android:layout_below="@+id/t1"
-        android:layout_alignRight="@+id/t1"
-        android:layout_alignEnd="@+id/t1" />
-
-       <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="Firstname"
-        android:id="@+id/t1"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/t5"
-        android:layout_alignStart="@+id/t5" />
-
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageButton"
             android:background="@drawable/user"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Firstname"
+            android:id="@+id/t1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/imageButton"
+            android:layout_alignRight="@+id/imageButton"
+            android:layout_alignEnd="@+id/imageButton"
+            android:layout_marginRight="71dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginTop="28dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Lastname"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/t2"
             android:layout_alignTop="@+id/t1"
-            android:layout_toLeftOf="@+id/t1"
-            android:layout_toStartOf="@+id/t1"
-            android:layout_marginRight="50dp"
-            android:layout_marginEnd="50dp" />
+            android:layout_alignLeft="@+id/imageButton"
+            android:layout_alignStart="@+id/imageButton"
+            android:layout_marginLeft="51dp"
+            android:layout_marginStart="51dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/t2"
+            android:id="@+id/space1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="id"
+            android:id="@+id/t3"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/space1"
+            android:layout_centerHorizontal="true" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/t3"
+            android:id="@+id/space2"/>
+
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="email"
+            android:id="@+id/t4"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/space2"
+            android:layout_centerHorizontal="true" />
+
+       <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/t4"
+            android:id="@+id/space3"/>
+
+
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="kerberos"
+            android:id="@+id/t5"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/space3"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
+
 </LinearLayout>
