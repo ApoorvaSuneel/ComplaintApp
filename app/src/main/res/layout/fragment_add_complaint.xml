@@ -30,8 +30,9 @@
                     android:background="@color/edittext"
                     android:layout_above="@+id/button"
                     android:drawableStart="@drawable/contents"
-                    android:layout_alignLeft="@+id/editText"
-                    android:layout_alignStart="@+id/editText" />
+                android:layout_toEndOf="@+id/textView11"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <Space
                 android:layout_width="match_parent"
@@ -59,7 +60,9 @@
                 android:drawableLeft="@drawable/anonymous"
                 android:layout_below="@+id/space1"
                 android:layout_alignRight="@+id/editText2"
-                android:layout_alignEnd="@+id/editText2" />
+                android:layout_alignEnd="@+id/editText2"
+                android:layout_toRightOf="@+id/textView11"
+                android:layout_toEndOf="@+id/textView11" />
 
             <Space
                 android:layout_width="match_parent"
@@ -111,9 +114,9 @@
                 android:hint="Priority"
                 android:background="@color/edittext"
                 android:layout_below="@+id/space3"
-                android:layout_toRightOf="@+id/textView12"
-                android:layout_toEndOf="@+id/textView12"
-                android:drawableLeft="@drawable/icon"/>
+                android:layout_toEndOf="@+id/textView11"
+                android:drawableLeft="@drawable/icon"
+                android:layout_toRightOf="@+id/textView11" />
 
             <Space
                 android:layout_width="match_parent"
@@ -138,9 +141,10 @@
                 android:background="@color/edittext"
                 android:hint="Is_Personal"
                 android:layout_below="@+id/space4"
-                android:layout_toRightOf="@+id/textView13"
                 android:layout_toEndOf="@+id/textView13"
-                android:drawableLeft="@drawable/privacy"/>
+                android:drawableLeft="@drawable/privacy"
+                android:layout_alignLeft="@+id/editText4"
+                android:layout_alignStart="@+id/editText4" />
 
             <Space
                 android:layout_width="match_parent"
@@ -165,9 +169,10 @@
                 android:hint="Team "
                 android:drawableLeft="@drawable/team"
                 android:layout_below="@+id/space5"
-                android:layout_toRightOf="@+id/textView14"
                 android:layout_toEndOf="@+id/textView14"
-                android:background="@color/edittext" />
+                android:background="@color/edittext"
+                android:layout_alignLeft="@+id/editText8"
+                android:layout_alignStart="@+id/editText8" />
 
             <Space
                 android:layout_width="match_parent"
@@ -192,9 +197,10 @@
                 android:hint="Tags"
                 android:background="@color/edittext"
                 android:layout_below="@+id/space6"
-                android:layout_toRightOf="@+id/textView15"
                 android:layout_toEndOf="@+id/textView15"
-                android:drawableLeft="@drawable/tags"/>
+                android:drawableLeft="@drawable/tags"
+                android:layout_alignLeft="@+id/editText9"
+                android:layout_alignStart="@+id/editText9" />
 
             <Space
                 android:layout_width="match_parent"

@@ -58,18 +58,15 @@ public class NotifyV extends Fragment {
              i2 = bundle.getString("id");
              i3 = bundle.getString("prio");
              i4 = bundle.getString("comp");
-             i5 = bundle.getString("poll");
-             i6 = bundle.getString("res");
-             i7 = bundle.getString("thread");
-             i8 = bundle.getString("anon");
+            i6=bundle.getString("resolver");
              i9= bundle.getString("status");
 
             t1.setText(i1);
           //  t2.setText(i2);
             t3.setText(i3);
             t4.setText(i4);
-            t5.setText(i5);
             t6.setText(i6);
+            t9.setText(i9);
           //  t7.setText(i7);
 
 

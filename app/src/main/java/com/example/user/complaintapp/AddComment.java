@@ -24,7 +24,7 @@ import java.security.acl.LastOwnerException;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link Fragment} subclass. This fragment class
  */
 public class AddComment extends Fragment {
 

@@ -14,7 +14,8 @@ import android.widget.Toast;
 
 public class Detailsf extends Fragment {
 String[] s1;
-TextView t1,t2,t3,t4,t5;
+    public static String fn,ln;
+TextView t1,t3,t4,t5;
     public Detailsf() {
         // Required empty public constructor
     }
@@ -27,7 +28,6 @@ TextView t1,t2,t3,t4,t5;
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_detailsf, container, false);
         t1=(TextView)v.findViewById(R.id.t1);
-        t2=(TextView)v.findViewById(R.id.t2);
         t3=(TextView)v.findViewById(R.id.t3);
         t4=(TextView)v.findViewById(R.id.t4);
         t5=(TextView)v.findViewById(R.id.t5);
@@ -35,8 +35,9 @@ TextView t1,t2,t3,t4,t5;
         if (bundle != null) {
            s1=bundle.getStringArray("data");
         }
-        t1.setText(s1[0]);
-        t2.setText(s1[1]);
+        fn=s1[0];
+        ln=s1[1];
+        t1.setText(s1[0].toUpperCase()+ "  "+s1[1].toUpperCase());
         t3.setText(s1[2]);
         t4.setText(s1[3]);
         t5.setText(s1[4]);

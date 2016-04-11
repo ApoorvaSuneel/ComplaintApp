@@ -41,6 +41,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="ComplaintApp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
                     android:id="@+id/textView4"
                     android:layout_below="@+id/imageView"
                     android:layout_centerHorizontal="true"

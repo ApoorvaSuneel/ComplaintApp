@@ -33,7 +33,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 /*
 * main activity for navigator class which houses all the fragments related to the activity.
-* 
+*
 * */
 public class Profile extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -67,7 +67,7 @@ public class Profile extends AppCompatActivity
             public void onClick(View view) {
                 Snackbar.make(view, "Logout basically", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                logout();
+               // logout();
             }
         });
 
@@ -137,6 +137,10 @@ public class Profile extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.action_settings1) {
+            logout();
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -174,7 +178,6 @@ public class Profile extends AppCompatActivity
             Resolvef b1=new Resolvef();
             android.support.v4.app.FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.frag, b1);
-            Toast.makeText(this, "Observation msdnfsdmbnCdf,jhsmdfnancelled", Toast.LENGTH_SHORT).show();
 
             ft.commit();
         }

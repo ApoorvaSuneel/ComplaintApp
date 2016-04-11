@@ -50,6 +50,9 @@ public class AddComplaint extends Fragment {
         ispers=(EditText)v.findViewById(R.id.editText8);
         addto=(EditText)v.findViewById(R.id.editText5);
         b=(ImageButton)v.findViewById(R.id.imageButton3);
+        tm=team.getText().toString();
+
+
         b.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -57,19 +60,26 @@ public class AddComplaint extends Fragment {
 
             }
         });
-        JSON1=Login.ip+"/default/addcomplaint.json?fn="+fn+"&ln="+ln+"&team="+tm+"&desc="+des+"&numtag="+n;
+       /* JSON1=Login.ip+"/default/addcomplaint.json?fn="+fn+"&ln="+ln+"&team="+tm+"&desc="+des+"&numtag="+n;
+        String[] a = tags.getText().toString().split(",");
+        for (int i=0;i<a.length;i++)
+        {
+            JSON1=JSON1+"&tag"+Integer.toString(i+1) +"="+a[i];
+        }
+        JSON1=JSON1+"&priority="+prio.getText().toString()+"&personal"+ispers.getText().toString()+"anony="+anon.getText().toString();*/
+         //addcomplaint();
+        //JSON1=Login.ip+"/default/addcomplaint.json?fn=bob&ln=martin&team=cs&desc=no%20marker%20in%20room&numtag=1&tag1=internet&priority=0&personal=0&anony=0";
+        return v;
+    }
+
+    private void addcomplaint() {
+        JSON1=Login.ip+"/default/addcomplaint.json?fn="+Detailsf.fn+"&ln="+Detailsf.ln+"&team="+team.getText().toString()+"&desc="+details.getText().toString()+"&numtag="+n;
         String[] a = tags.getText().toString().split(",");
         for (int i=0;i<a.length;i++)
         {
             JSON1=JSON1+"&tag"+Integer.toString(i+1) +"="+a[i];
         }
         JSON1=JSON1+"&priority="+prio.getText().toString()+"&personal"+ispers.getText().toString()+"anony="+anon.getText().toString();
-         addcomplaint();
-        //JSON1=Login.ip+"/default/addcomplaint.json?fn=bob&ln=martin&team=cs&desc=no%20marker%20in%20room&numtag=1&tag1=internet&priority=0&personal=0&anony=0";
-        return v;
-    }
-
-    private void addcomplaint() {
 
         JsonObjectRequest jreq = new JsonObjectRequest(Request.Method.POST,
                 JSON1, null, new Response.Listener<JSONObject>() {
