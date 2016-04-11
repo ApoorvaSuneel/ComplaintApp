@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A fragment class which views the poll data related to the particular complaint fethced using its complaint id using bundle
  */
 public class PollView extends ListFragment {
 
@@ -59,9 +59,6 @@ public class PollView extends ListFragment {
             i5=bundle.getString("pollid");
             Json= Login.ip + "viewpoll.json/"+i2;
                       li=new ArrayList<String>();//view poll
-            Toast.makeText(getActivity(),
-                    Json,
-                    Toast.LENGTH_LONG).show();
            request();
         }
         return v;
@@ -85,11 +82,11 @@ public class PollView extends ListFragment {
                     JSONArray glist =clist.getJSONArray("ocounts");
                     JSONArray g1list = clist.getJSONArray("optionlist");
                     String id = clist.getString("id");
-                    for (int i = 0; i < glist.length(); i++) {
+                    for (int i = 0; i < g1list.length(); i++) {
 
                         int note =glist.getInt(i);
                         String  note2 =g1list.getString(i);
-                        m=note2+"    "+note;
+                        m= "     "+note2+ "     ->     "+Integer.toString(note);
                         li.add(m);
 
                     }
@@ -102,7 +99,7 @@ public class PollView extends ListFragment {
                 catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(getActivity(),
-                            " not ableto display the polls" + e.getMessage(),
+                            " not ableto display the polls\n"+" ERROR : " + e.getMessage(),
                             Toast.LENGTH_LONG).show();
                 }
 

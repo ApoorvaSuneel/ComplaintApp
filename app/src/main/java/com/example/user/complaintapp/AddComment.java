@@ -46,13 +46,11 @@ public class AddComment extends Fragment {
         Bundle b=this.getArguments();
         b1=(ImageButton)v.findViewById(R.id.imageButton4);
         t1=(EditText)v.findViewById(R.id.editText10);
-        String s=t1.getText().toString();
         if (b!=null)
         {
             m=b.getString("id");
 
         }
-        JSON= Login.ip+"/default/addcomment.json/"+m+"?desc="+s;
         b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 clicked();
@@ -65,6 +63,8 @@ public class AddComment extends Fragment {
     }
 
     private void clicked() {
+        String s=t1.getText().toString();
+        JSON= Login.ip+"/default/addcomment.json/"+m+"?desc="+s;
         JsonObjectRequest jreq = new JsonObjectRequest(Request.Method.GET,
                 JSON, null, new Response.Listener<JSONObject>() {
 

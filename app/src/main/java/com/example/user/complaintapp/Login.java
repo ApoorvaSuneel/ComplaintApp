@@ -19,6 +19,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+/*
+* The main login activity which allows the user to login into his/her account. If the password or username os invalid, the login
+* response is erroneous.
+*
+*
+*
+* */
 
 public class Login extends AppCompatActivity {
      Button b;
@@ -50,6 +57,7 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+    //this method called when user clicks on login button. the information is sent to the server via this method.
     private void registerUser() {
         JsonObjectRequest jreq = new JsonObjectRequest(Request.Method.GET,
                 JSON_URL, null, new Response.Listener<JSONObject>() {
@@ -58,9 +66,6 @@ public class Login extends AppCompatActivity {
             public void onResponse(JSONObject response) {
                 try {
                     Boolean s=response.getBoolean("success");
-                    Toast.makeText(getApplicationContext(),
-                            s.toString(),
-                            Toast.LENGTH_LONG).show();
                     JSONObject u=response.getJSONObject("user");
                     //Boolean s=response.getBoolean("success");
                     String name = "";
@@ -78,7 +83,7 @@ public class Login extends AppCompatActivity {
                         //define intent
                         Toast.makeText(Login.this,
                                 jsonResponse,
-                                Toast.LENGTH_LONG).show();
+                                Toast.LENGTH_SHORT).show();
                         //intent for another class
                         Intent myIntent = new Intent(
                                 Login.this, Profile.class);

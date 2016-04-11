@@ -53,9 +53,8 @@ public class ResolveD extends Fragment {
         //t7 = (TextView) v.findViewById(R.id.cv7);
         //t8 = (TextView) v.findViewById(R.id.cv8);
         t9 = (TextView) v.findViewById(R.id.cv9);
-        t10 = (TextView) v.findViewById(R.id.cv10);
+       // t10 = (TextView) v.findViewById(R.id.cv10);
         t11 = (TextView) v.findViewById(R.id.cv11);
-        t12 = (TextView) v.findViewById(R.id.cv12);
         t13 = (TextView) v.findViewById(R.id.cv13);
         b1 = (Button) v.findViewById(R.id.b1);
         b2 = (ImageButton) v.findViewById(R.id.b2);
@@ -74,24 +73,15 @@ public class ResolveD extends Fragment {
             //i6 = bundle.getString("res");
            // i7 = bundle.getString("thread");
             //i8 = bundle.getString("anon");
-            i9 = bundle.getString("status");
-            i10 = bundle.getString("teamid");
-            i11 = bundle.getString("imageid");
-            i12 = bundle.getString("red");
-            i13 = bundle.getString("pers");
+            i9 = bundle.getString("teamid");
+            i11 = bundle.getString("red");
+            i13 = bundle.getString("status");
 
             t1.setText(i1);
-            //t2.setText(i2);
             t3.setText(i3);
             t4.setText(i4);
-            //t5.setText(i5);
-            //t6.setText(i6);
-            //t7.setText(i7);
-            //t8.setText(i8);
             t9.setText(i9);
-            t10.setText(i10);
             t11.setText(i11);
-            t12.setText(i12);
             t13.setText(i13);
         }
 

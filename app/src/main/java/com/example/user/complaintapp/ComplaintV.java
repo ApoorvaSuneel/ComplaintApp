@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +30,7 @@ import org.json.JSONObject;
  */
 public class ComplaintV extends Fragment {
 
-    Button b2,b3,b4,b5,b6;
+    ImageButton b2,b3,b4,b5;
     private TextView t1,t2,t3,t4,t5,t6,t9,t10,t11,t12,t13;
     private String i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13;
     private String JSON1,JSON2,JSON3,JSON4,JSON5,JSON6 ;
@@ -48,40 +49,37 @@ public class ComplaintV extends Fragment {
 
         t3=(TextView)v.findViewById(R.id.cv3);
         t4=(TextView)v.findViewById(R.id.cv4);
-        t5=(TextView)v.findViewById(R.id.cv5);
+       // t5=(TextView)v.findViewById(R.id.cv5);
         t6=(TextView)v.findViewById(R.id.cv6);
         t9=(TextView)v.findViewById(R.id.cv9);
-        t10=(TextView)v.findViewById(R.id.cv10);
+       // t10=(TextView)v.findViewById(R.id.cv10);
         t11=(TextView)v.findViewById(R.id.cv11);
         t12=(TextView)v.findViewById(R.id.cv12);
         t13=(TextView)v.findViewById(R.id.cv13);
-        b2=(Button)v.findViewById(R.id.b2);
-        b3=(Button)v.findViewById(R.id.b3);
-        b4=(Button)v.findViewById(R.id.b4);
-        b5=(Button)v.findViewById(R.id.b5);
+        b2=(ImageButton)v.findViewById(R.id.b2);
+        b3=(ImageButton)v.findViewById(R.id.b3);
+        b4=(ImageButton)v.findViewById(R.id.b4);
+        b5=(ImageButton)v.findViewById(R.id.b5);
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             i1 = bundle.getString("txt");
-            i2 = bundle.getString("id");
+            i2=bundle.getString("id");
             i3 = bundle.getString("prio");
             i4 = bundle.getString("comp");
-            i5 = bundle.getString("poll");
             i6 = bundle.getString("res");
-            i7 = bundle.getString("thread");
-            i8 = bundle.getString("anon");
-            i9= bundle.getString("status");
-            i10= bundle.getString("teamid");
-            i11= bundle.getString("imageid");
-            i12= Boolean.toString(bundle.getBoolean("red"));
+            i9= bundle.getString("teamid");
+            i11= Boolean.toString(bundle.getBoolean("red"));
+            i12= Boolean.toString(bundle.getBoolean("pers"));
+            i13=bundle.getString("status");
 
             t1.setText(i1);
             t3.setText(i3);
             t4.setText(i4);
             t6.setText(i6);
             t9.setText(i9);
-            t10.setText(i10);
             t11.setText(i11);
             t12.setText(i12);
+            t13.setText(i13);
 
         }
 
@@ -89,14 +87,7 @@ public class ComplaintV extends Fragment {
         JSON2=Login.ip+"default/upvotec.json/"+i2+"?up=0";//downvote
         JSON3=Login.ip+"viewpoll.json/"+i2;//poll
         JSON4=Login.ip+"viewthread.json/"+i2;//thread
-        //JSON5=Login.ip+"markred.json/"+i2;
-       /*b1.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View v) {
-                upvote();
-
-            }
-        });*/
         b2.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -125,13 +116,7 @@ public class ComplaintV extends Fragment {
 
             }
         });
-        /*b6.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View v) {
-                markred();
-            }
-        });
-        */
 
         return v;
     }

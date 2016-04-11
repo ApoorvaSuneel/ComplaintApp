@@ -3,6 +3,11 @@ package com.example.user.complaintapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+/*
+* This is the main splash page for the andorid application
+*
+*
+* */
 
 public class MainActivity0 extends AppCompatActivity {
 
@@ -13,10 +18,11 @@ public class MainActivity0 extends AppCompatActivity {
         //for splash page
         Thread timer = new Thread() {
             @Override
+            //method to display the splash page for 800 ns.
             public void run() {
                 try
                 {
-                    sleep(500);
+                    sleep(700);
                 }
                 catch (InterruptedException e)
                 {

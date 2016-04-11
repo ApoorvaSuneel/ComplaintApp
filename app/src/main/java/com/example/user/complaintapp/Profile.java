@@ -31,7 +31,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
+/*
+* main activity for navigator class which houses all the fragments related to the activity.
+* 
+* */
 public class Profile extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     NavigationView navigationView=null;

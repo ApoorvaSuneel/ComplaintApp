@@ -30,18 +30,19 @@ import java.util.ArrayList;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ A fragment class which is a part of the main activity and usefule to view threads related any particular complaint. From this activty
+ one can traverse to the commenting view too.
  */
 public class ThreadView extends ListFragment {
 String m,JSON;
     ArrayAdapter<String> t;
-    private static ArrayList<String> thread_user,thread_comment;
+    ArrayList<String> thread_comment;
     String[] array1;
     ImageButton b1;
     int tid,counts;
 
     public ThreadView() {
-        // Required empty public constructor
+
     }
 
 
@@ -65,6 +66,7 @@ String m,JSON;
             m=b.getString("id");
             JSON=b.getString("ip");
         }
+        thread_comment=new ArrayList<String>();
         viewT();
         return v;
     }
@@ -78,7 +80,6 @@ String m,JSON;
 
         if (fm.findFragmentById(android.R.id.content) == null) {
             FragmentTransaction ft = fm.beginTransaction();
-            // FragmentTransaction fragmentTransaction = getActivity().getFragmentManager().beginTransaction();
             ft.replace(R.id.frag, myDetailFragment);
             ft.commit();
         }
@@ -94,10 +95,8 @@ String m,JSON;
 
                 try {
                     // Parsing json object response
-                    JSONObject complist = response.getJSONObject("threads");
-                    Boolean b=response.getBoolean("success");
-                    if(b)
-                    {
+                    JSONObject complist = response.getJSONObject("thread");
+
                         tid=complist.getInt("id");
 
                         counts=complist.getInt("ccounts");
@@ -105,14 +104,14 @@ String m,JSON;
                         JSONArray j2=complist.getJSONArray("comments");
                         for (int i = 0; i < counts; i++) {
 
-                            thread_comment.add(j2.getString(i) + " by user of id : " + j1.getString(i) );
+                            thread_comment.add(j2.getString(i) + " by user of id : " + Integer.toString(j1.getInt(i)) );
 
                         }
                         array1 = thread_comment.toArray(new String[thread_comment.size()]);
                         t = new ArrayAdapter<String>(getActivity(), R.layout.subject,R.id.sub,array1);
                         setListAdapter(t);
 
-                    }
+
 
                     //udone set to 1 for non repetative json results
                 }

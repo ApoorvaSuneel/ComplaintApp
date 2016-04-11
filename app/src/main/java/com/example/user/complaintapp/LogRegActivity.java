@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+/*
+* choice activity to proceed further
+*
+*
+* */
 
 public class LogRegActivity extends AppCompatActivity {
     Button b1;
@@ -14,7 +19,7 @@ public class LogRegActivity extends AppCompatActivity {
         setContentView(R.layout.activity_log_reg);
         b1=(Button)findViewById(R.id.log);
 
-        //login
+        // intent defined to move further when button clicks
         b1.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
