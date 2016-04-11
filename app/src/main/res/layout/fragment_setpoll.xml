@@ -6,53 +6,84 @@
     android:orientation="vertical"
     tools:context="com.example.user.complaintapp.setpoll">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title of the poll"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="details of topic of poll"
-        android:id="@+id/editText6" />
+        android:text="Details of topic of poll"
+        android:id="@+id/editText6"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/editText6"
+        android:id="@+id/space2"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No of options"
-        android:id="@+id/textView3" />
+        android:text="No.of options"
+        android:id="@+id/textView3"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ed1" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/ed1"
+        android:id="@+id/space3"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Option details"
-        android:id="@+id/t2" />
+        android:id="@+id/t2"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ed2" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/ed2"
+        android:id="@+id/space4"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please type your options separated with a comma"
-        android:id="@+id/textView5" />
+        android:id="@+id/textView5"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
-
-    <!--<Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SETUP A POLL"
-        android:id="@+id/b" />-->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textView5"
+        android:id="@+id/space1"/>
 
     <ImageButton
         android:layout_width="wrap_content"

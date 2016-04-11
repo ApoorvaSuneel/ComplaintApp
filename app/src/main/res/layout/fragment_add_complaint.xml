@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/plainblue"
@@ -7,147 +7,213 @@
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="match_parent"
-            android:weightSum="1"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true">
-
-
-            <EditText
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:id="@+id/editText2"
-                android:hint="Complaint Details here"
-                android:background="@color/edittext"
-                android:layout_marginBottom="26dp"
-                android:layout_above="@+id/button"
-                android:layout_alignLeft="@+id/editText"
-                android:layout_alignStart="@+id/editText" />
-
-            <LinearLayout android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:layout_width="148dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/editText3"
-                    android:hint="Anonymity"
-                    android:background="@color/edittext"
-                    android:drawableLeft="@drawable/anonymous"
-                    android:layout_marginBottom="26dp"
-                    android:layout_above="@+id/button"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:id="@+id/editText4"
-                    android:hint="Priority"
-                    android:background="@color/edittext"
-                    android:drawableLeft="@drawable/icon"
-                    android:layout_marginBottom="26dp"
-                    android:layout_above="@+id/button"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
-
-            </LinearLayout>
-
-
-            <LinearLayout android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:layout_width="148dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/editText5"
-                    android:hint="Addressed to"
-                    android:background="@color/edittext"
-                    android:drawableLeft="@drawable/authority"
-                    android:layout_marginBottom="26dp"
-                    android:layout_above="@+id/button"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
-
-                <!--<Button
-                android:layout_width="175dp"
-                android:layout_height="40dp"
-                android:text="Add Image"
-                android:drawableLeft="@drawable/image"
-                android:id="@+id/button3"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/buttonborder"
-                android:layout_gravity="center_horizontal" />-->
-
-                <EditText
-                    android:layout_width="170dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/editText19"
-                    android:drawableLeft="@drawable/image1"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:hint="Image "
-                    android:background="@color/edittext" />
-
-            </LinearLayout>
-
-
-            <LinearLayout android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <EditText
-                    android:layout_width="148dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/editText8"
-                    android:background="@color/edittext"
-                    android:hint="Is_Personal"
-                    android:layout_marginLeft="10dp"/>
-
-                <EditText
-                    android:layout_width="170dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/editText9"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:hint="Team "
-                    android:background="@color/edittext" />
-            </LinearLayout>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editText7"
-                android:hint="Tags"
-                android:background="@color/edittext"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:drawableLeft="@drawable/tags"
-                android:layout_marginTop="10dp"/>
-
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/imageButton3"
-                android:background="@drawable/appicon2"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"/>
-        </LinearLayout>
-    </RelativeLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
-        android:layout_height="match_parent"></ScrollView>
+        android:layout_height="match_parent">
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_above="@+id/editText2"
+                android:id="@+id/space"/>
+
+            <EditText
+                    android:layout_width="380dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/editText2"
+                    android:hint="Complaint Details here"
+                    android:background="@color/edittext"
+                    android:layout_above="@+id/button"
+                    android:drawableStart="@drawable/contents"
+                    android:layout_alignLeft="@+id/editText"
+                    android:layout_alignStart="@+id/editText" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/editText2"
+                android:id="@+id/space1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Anonymity"
+                android:id="@+id/textView10"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                 android:layout_below="@+id/space1"/>
+
+            <EditText
+                android:layout_width="275dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText3"
+                android:hint="Anonymity"
+                android:background="@color/edittext"
+                android:drawableLeft="@drawable/anonymous"
+                android:layout_below="@+id/space1"
+                android:layout_alignRight="@+id/editText2"
+                android:layout_alignEnd="@+id/editText2" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/textView10"
+                android:id="@+id/space2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Addressed To"
+                android:id="@+id/textView11"
+                android:layout_below="@+id/space2"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText5"
+                android:hint="Addressed to"
+                android:background="@color/edittext"
+                android:drawableLeft="@drawable/authority"
+                android:layout_below="@+id/space2"
+                android:layout_toRightOf="@+id/textView11"
+                android:layout_toEndOf="@+id/textView11" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/textView11"
+                android:id="@+id/space3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Priority"
+                android:id="@+id/textView12"
+                android:layout_below="@+id/space3"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText4"
+                android:hint="Priority"
+                android:background="@color/edittext"
+                android:layout_below="@+id/space3"
+                android:layout_toRightOf="@+id/textView12"
+                android:layout_toEndOf="@+id/textView12"
+                android:drawableLeft="@drawable/icon"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/textView12"
+                android:id="@+id/space4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Is Personal"
+                android:id="@+id/textView13"
+                android:layout_below="@+id/space4"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="270dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText8"
+                android:background="@color/edittext"
+                android:hint="Is_Personal"
+                android:layout_below="@+id/space4"
+                android:layout_toRightOf="@+id/textView13"
+                android:layout_toEndOf="@+id/textView13"
+                android:drawableLeft="@drawable/privacy"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/textView13"
+                android:id="@+id/space5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Team"
+                android:id="@+id/textView14"
+                android:layout_below="@+id/space5"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="325dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText9"
+                android:hint="Team "
+                android:drawableLeft="@drawable/team"
+                android:layout_below="@+id/space5"
+                android:layout_toRightOf="@+id/textView14"
+                android:layout_toEndOf="@+id/textView14"
+                android:background="@color/edittext" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/textView14"
+                android:id="@+id/space6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Tags"
+                android:id="@+id/textView15"
+                android:layout_below="@+id/space6"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="330dp"
+                android:layout_height="30dp"
+                android:id="@+id/editText7"
+                android:hint="Tags"
+                android:background="@color/edittext"
+                android:layout_below="@+id/space6"
+                android:layout_toRightOf="@+id/textView15"
+                android:layout_toEndOf="@+id/textView15"
+                android:drawableLeft="@drawable/tags"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textView15"
+                android:id="@+id/space7"/>
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/imageButton3"
+                android:background="@drawable/appicon2"
+                android:layout_below="@+id/space7"
+                android:layout_marginLeft="165dp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

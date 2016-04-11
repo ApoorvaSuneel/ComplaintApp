@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/plainblue"
     tools:context="com.example.user.complaintapp.PollView">
 
     <TextView
@@ -10,12 +11,18 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Poll Data"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:id="@+id/textView7" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Touch the list item to vote"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:id="@+id/textView7" />
 
     <ScrollView
@@ -45,7 +52,5 @@
         </RelativeLayout>
 
     </ScrollView>
-
-
 
 </LinearLayout>
